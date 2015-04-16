@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.emilia.pfi3_2015_emilia_l_assignment3.Travels"
+    android:background="#ffffffff">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/text_from"
+            android:id="@+id/textViewFrom"
+            android:paddingTop="10dp"
+            android:textColor="#ff000000"
+            android:paddingLeft="15dp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_gravity="center_horizontal"
+            android:spinnerMode="dropdown"
+            android:entries="@array/stations"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/text_to"
+            android:id="@+id/textViewTo"
+            android:textColor="#ff000000"
+            android:paddingLeft="15dp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:layout_gravity="center_horizontal"
+            android:spinnerMode="dropdown"
+            android:entries="@array/stations"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
+
+
+        <ExpandableListView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expandableListView"
+            android:layout_gravity="left|top"
+            android:groupIndicator="@null"
+            android:divider="#ffff3b39"
+            android:dividerHeight="@dimen/custom_divider" />
+    </LinearLayout>
+</FrameLayout>
