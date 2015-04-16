@@ -56,13 +56,13 @@ public class Adapter extends BaseExpandableListAdapter {
         LayoutInflater li = (LayoutInflater) this.c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = li.inflate(R.layout.list_item_expanded,null);
 
-        TextView arrTime = (TextView) convertView.findViewById(R.id.textViewTravelMinutes);
-        String min = j.get(groupPosition).getTravelMinutes().toString();
-        arrTime.setText(min);
+        TextView travelMinutes = (TextView) convertView.findViewById(R.id.textViewTravelMinutes);
+        String min = j.get(groupPosition).getTravelMinutes();
+        travelMinutes.setText(min);
 
-        TextView depTime = (TextView) convertView.findViewById(R.id.textViewDepTimeDev);
-        String dev = j.get(groupPosition).getDepTimeDeviation().toString();
-        depTime.setText(dev);
+        TextView depTimeDev = (TextView) convertView.findViewById(R.id.textViewDepTimeDev);
+        String dev = j.get(groupPosition).getDepTimeDeviation();
+        depTimeDev.setText(dev);
 
         return convertView;
     }
