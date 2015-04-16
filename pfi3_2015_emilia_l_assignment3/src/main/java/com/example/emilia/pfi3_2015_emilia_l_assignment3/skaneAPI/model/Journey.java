@@ -3,7 +3,7 @@ package com.example.emilia.pfi3_2015_emilia_l_assignment3.skaneAPI.model;
 import java.util.Calendar;
 
 /**
- * A Journey has a start and an endstation. Stations between start and stop are not implemented in this version
+ * A Journey has a start and an end station. Stations between start and stop are not implemented in this version
  * @author K3LARA
  *
  */
@@ -61,9 +61,9 @@ public class Journey {
 	}
 	
 	public void setTravelTime(String travelMinutes) {
-		this.travelMinutes = travelMinutes;
-		
-	}
+        this.travelMinutes = travelMinutes;
+
+    }
 	
 	public String getTravelMinutes(){
 		return this.travelMinutes;

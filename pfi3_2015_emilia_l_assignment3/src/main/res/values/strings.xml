@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Pfi3_2015_Emilia_L_Assignment3</string>
+    <string name="app_name">Skånetrafiken</string>
     <string name="action_settings">Settings</string>
     <string name="button_search">Sök</string>
     <string name="text_from">Från:</string>
     <string name="text_to">Till:</string>
 
 
-    <string-array name="stations">
+    <string-array name="station">
         <item>Lund C</item>
         <item>Ystad Klostret</item>
         <item>Lund Bankgatan</item>
