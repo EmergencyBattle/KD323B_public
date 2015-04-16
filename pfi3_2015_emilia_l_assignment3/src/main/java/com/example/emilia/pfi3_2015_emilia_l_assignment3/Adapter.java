@@ -38,28 +38,31 @@ public class Adapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         LayoutInflater li = (LayoutInflater) this.c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        convertView = li.inflate(R.layout.fragment_travels,null);
-        TextView tvCourse = (TextView) convertView.findViewById(R.id.tv_course);
-        String course = j.get(groupPosition).getCourse();
-        tvCourse.setText(course);
-        TextView tvDate =(TextView) convertView.findViewById(R.id.tv_date);
-        String date = j.get(groupPosition).getDate();
-        tvDate.setText(date);
+        convertView = li.inflate(R.layout.list_item_collapsed,null);
+
+        TextView depTime = (TextView) convertView.findViewById(R.id.textViewDepTime);
+        String dep = j.get(groupPosition).getDepDateTime().toString();
+        depTime.setText(dep);
+
+        TextView arrTime = (TextView) convertView.findViewById(R.id.textViewArrTime);
+        String time = j.get(groupPosition).getArrDateTime().toString();
+        arrTime.setText(time);
+
         return convertView;
     }
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         LayoutInflater li = (LayoutInflater) this.c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        convertView = li.inflate(R.layout.fragment_travels,null);
+        convertView = li.inflate(R.layout.list_item_expanded,null);
 
-        TextView arrTime = (TextView) convertView.findViewById(R.id.arrTime);
-        String room = j.get(groupPosition).getArrDateTime().toString();
-        arrTime.setText(room);
+        TextView arrTime = (TextView) convertView.findViewById(R.id.textViewTravelMinutes);
+        String min = j.get(groupPosition).getTravelMinutes().toString();
+        arrTime.setText(min);
 
-        TextView depTime = (TextView) convertView.findViewById(R.id.depTime);
-        String start = j.get(groupPosition).getDepDateTime().toString();
-        depTime.setText(start);
+        TextView depTime = (TextView) convertView.findViewById(R.id.textViewDepTimeDev);
+        String dev = j.get(groupPosition).getDepTimeDeviation().toString();
+        depTime.setText(dev);
 
         return convertView;
     }
