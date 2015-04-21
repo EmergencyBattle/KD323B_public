@@ -15,4 +15,14 @@
         <item>Halmstad C</item>
     </string-array>
 
+    <string-array name="stationNumbers">
+        <item>81216</item>
+        <item>86197</item>
+        <item>81156</item>
+        <item>80140</item>
+        <item>45007</item>
+        <item>13003</item>
+    </string-array>
+
+
 </resources>
