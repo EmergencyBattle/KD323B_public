@@ -54,6 +54,8 @@ public class Travels extends Fragment implements AdapterView.OnItemSelectedListe
         spinnerFrom.setOnItemSelectedListener(this);
         spinnerTo.setOnItemSelectedListener(this);
 
+        setHasOptionsMenu(true);
+
         return view;
 
     }
@@ -70,7 +72,7 @@ public class Travels extends Fragment implements AdapterView.OnItemSelectedListe
 
 
             String[] stationNo = getResources().getStringArray(R.array.stationNumbers);
-            String searchURL = Constants.getURL(stationNo[fromStation], stationNo[toStation], 14);
+            String searchURL = Constants.getURL(stationNo[fromStation], stationNo[toStation], 5);
             journeyList.clear();
 
             new DoInBackground().execute(searchURL);
@@ -87,8 +89,8 @@ public class Travels extends Fragment implements AdapterView.OnItemSelectedListe
         int fromStation = spinnerFrom.getSelectedItemPosition();
         int toStation = spinnerTo.getSelectedItemPosition();
 
-        String[] stationNo = getResources().getStringArray(R.array.station);
-        String searchURL = Constants.getURL( stationNo[fromStation], stationNo[toStation], 14);
+        String[] stationNo = getResources().getStringArray(R.array.stationNumbers);
+        String searchURL = Constants.getURL( stationNo[fromStation], stationNo[toStation], 5);
         new DoInBackground().execute(searchURL);
 
     }

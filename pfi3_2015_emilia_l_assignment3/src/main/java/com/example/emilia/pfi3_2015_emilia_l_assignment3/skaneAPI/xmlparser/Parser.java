@@ -91,9 +91,13 @@ public class Parser {
 				String toStationID ="";
 				for (int j =0;j < toNode.getLength();j++){
 					Element e2 = (Element) toNode.item(j);
-					if (j==(toNode.getLength()-1)){	//get the last stop
-						toStationName = parser.getValue(e2, "Name");  
-						toStationID = parser.getValue(e2, "Id");
+
+                    if (j==0) {
+
+					if (j==(toNode.getLength()-1)) {    //get the last stop
+                        toStationName = parser.getValue(e2, "Name");
+                        toStationID = parser.getValue(e2, "Id");
+                    }
 					}else{
 						
 						//Here is the place to get the intermediate stops

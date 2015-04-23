@@ -10,14 +10,16 @@
         android:layout_height="fill_parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/text_from"
             android:id="@+id/textViewFrom"
             android:paddingTop="10dp"
-            android:textColor="#ff000000"
-            android:paddingLeft="15dp" />
+            android:textColor="#ffffffff"
+            android:paddingLeft="15dp"
+            android:paddingBottom="7dp"
+            android:background="#ffff0505"/>
 
         <Spinner
             android:layout_width="match_parent"
@@ -28,17 +30,20 @@
             android:entries="@array/station"
             android:layout_marginLeft="7dp"
             android:layout_marginRight="7dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp" />
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/text_to"
             android:id="@+id/textViewTo"
-            android:textColor="#ff000000"
-            android:paddingLeft="15dp" />
+            android:textColor="#ffffffff"
+            android:paddingLeft="15dp"
+            android:background="#ffff0505"
+            android:paddingBottom="7dip"
+            android:paddingTop="7dip" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -49,9 +54,10 @@
             android:entries="@array/station"
             android:layout_marginLeft="7dp"
             android:layout_marginRight="7dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp" />
-
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:layout_marginBottom="7dip"
+/>
 
         <ExpandableListView
             android:layout_width="fill_parent"
@@ -59,7 +65,19 @@
             android:id="@+id/expandableListView"
             android:layout_gravity="left|top"
             android:groupIndicator="@null"
-            android:divider="#ffff3b39"
-            android:dividerHeight="@dimen/custom_divider" />
+            android:divider="#ffffffff"
+            android:dividerHeight="@dimen/custom_divider"
+            android:background="#2d6c6c6c"
+            android:icon="@drawable/ic_action_locate"/>
+
+        <ImageView
+            android:id="@+id/imageViewLocate"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ic_action_locate"
+            android:visibility="visible"
+            android:layout_gravity="left|top"/>
+
+
     </LinearLayout>
 </FrameLayout>
